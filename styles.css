@@ -33,7 +33,7 @@ p {
     margin: auto;
     background-color: rgba(0,0,0,.1);
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 0px;
     box-shadow: 0px 0px 40px 20px rgba(241, 223, 197, 0.4);
     flex-shrink: 0;
 }
