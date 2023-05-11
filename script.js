@@ -3,6 +3,7 @@ let container = document.getElementById("container");
 let gridTotal = 100;
 let gridDimension = "80px";
 createGrid();
+drawGrid();
 
 
 let tenBtn = document.getElementById("tenBtn");
