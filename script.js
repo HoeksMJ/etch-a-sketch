@@ -43,7 +43,6 @@ hundredBtn.addEventListener("click", () => {
 });
 
 function createGrid (){                                             /*create i amount of boxes (buttons), determined by gridDimension, and assign each a unique id */
-    console.log("creatinggrid")
     for (let i = 1; i <= gridTotal; i++) {
         let gridCreator = document.createElement("button");
         gridCreator.className = "grid";
