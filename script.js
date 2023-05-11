@@ -1,10 +1,13 @@
 let container = document.getElementById("container");
 
-let gridTotal = 256;
-let gridDimension = "10px";
+let gridTotal = 100;
+let gridDimension = "80px";
+createGrid();
+
 
 let tenBtn = document.getElementById("tenBtn");
 tenBtn.addEventListener("click", () => {
+    eraseGrid();
     gridTotal = 100;
     gridDimension = "80px";
     createGrid();
@@ -13,6 +16,7 @@ tenBtn.addEventListener("click", () => {
 
 let sixteenBtn = document.getElementById("sixteenBtn");
 sixteenBtn.addEventListener("click", () => {
+    eraseGrid();
     gridTotal = 256;
     gridDimension = "50px";
     createGrid();
@@ -21,6 +25,7 @@ sixteenBtn.addEventListener("click", () => {
 
 let fourtyBtn = document.getElementById("fourtyBtn");
 fourtyBtn.addEventListener("click", () => {
+    eraseGrid();
     gridTotal = 1600;
     gridDimension = "20px";
     createGrid();
@@ -29,6 +34,7 @@ fourtyBtn.addEventListener("click", () => {
 
 let hundredBtn = document.getElementById("hundredBtn");
 hundredBtn.addEventListener("click", () => {
+    eraseGrid();
     gridTotal = 10000;
     gridDimension = "8px";
     createGrid();
@@ -45,6 +51,13 @@ function createGrid (){
     for (let i = 1; i<= gridTotal; i++){
         let gridBox = document.getElementById(`grid${i}`);
         gridBox.style.maxWidth = gridDimension;
+    };
+};
+
+function eraseGrid (){
+    for (let i = 1; i <= gridTotal; i++){
+        let gridBox = document.getElementById(`grid${i}`);
+        gridBox.remove();
     };
 };
 
@@ -65,3 +78,4 @@ function drawGrid(){
         });
     };
 };
+
