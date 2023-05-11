@@ -1,0 +1,32 @@
+body {
+    background-color: burlywood;
+}
+
+#container {
+    display: flex;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: rgba(0, 0, 0, 0.37);
+    margin: 0;
+    padding: 0;
+    height: 800px;
+    width: 800px;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 10%;
+    background-color: rgba(0,0,0,.1);
+}
+
+.grid {
+    display: inline-block;
+    border-style: solid;
+    border-radius: 2%;
+    border-width: 2%;
+    border-color: rgba(0, 0, 0, 0.164);
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    height: auto;
+    width: 100%;
+    max-width: 50px;
+}
