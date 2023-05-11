@@ -60,7 +60,7 @@ function drawGrid(){
         });
         gridBox.addEventListener("mouseenter", () => {
             if (toggle ===1){
-                gridBox.style.backgroundColor = "rgba(214, 214, 214, 0.5)";
+                gridBox.style.backgroundColor = "rgba(241, 223, 197, 0.6)";
             };
         });
     };
