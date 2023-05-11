@@ -1,5 +1,10 @@
 body {
-    background-color: burlywood;
+    background-color: rgb(177, 144, 102);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    max-height: 1200px;
 }
 
 #container {
@@ -13,7 +18,7 @@ body {
     width: 800px;
     flex-wrap: wrap;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 100px;
     background-color: rgba(0,0,0,.1);
     box-shadow: 0px 0px 40px 20px rgba(247, 247, 247, 0.418);
 }
@@ -29,6 +34,21 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
     height: auto;
     width: 100%;
+}
+
+.selector {
+    width: 150px;
+    margin: 30px;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.247);
+    border-color:rgba(0, 0, 0, 0.336);
+    border-style: solid;
 }
 
 
