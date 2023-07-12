@@ -63,19 +63,39 @@ function eraseGrid (){                                              /*target eac
 };
 
 function drawGrid(){                                                /*for each element targeted via its unique id, upt o however many total there are, determined by gridTotal, change the background color of a box when a mouse is pressed down and hovers onto the box */
+    let toggle = false;
+    let mouseEvent;
+    container.addEventListener("contextmenu", (e) => {e.preventDefault()});
+    container.addEventListener("mousedown", (event) => {
+        if (event.button == 0){
+            mouseEvent = 0;
+            toggle = true;
+        }
+        else {
+            mouseEvent = 1;
+            toggle = true;
+        }
+    });
+    container.addEventListener("mouseup", () => {
+        toggle = false;
+    });
     for (let i = 1; i <= gridTotal; i++){
         let gridBox = document.getElementById(`grid${i}`);
-        let toggle = false;
-        container.addEventListener("mousedown", () => {
-            toggle = true;
-        });
-        container.addEventListener("mouseup", () => {
-            toggle = false;
-        });
-        gridBox.addEventListener("mouseenter", () => {
-            if (toggle == true){
+        gridBox.addEventListener("mousedown", (event) => {
+            if (event.button == 0){
                 gridBox.style.backgroundColor = "rgba(241, 223, 197, 0.6)";
-            };
+            }
+            else {
+                gridBox.style.backgroundColor = "rgba(241, 223, 197, 0)";
+            }
+        })
+        gridBox.addEventListener("mouseenter", () => {
+            if (mouseEvent == 0 && toggle == true){
+                gridBox.style.backgroundColor = "rgba(241, 223, 197, 0.6)";
+            }
+            else if (mouseEvent == 1 && toggle == true){
+                gridBox.style.backgroundColor = "rgba(241, 223, 197, 0)";
+            }
         });
     };
 };
