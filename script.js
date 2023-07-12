@@ -1,7 +1,7 @@
 let container = document.getElementById("container");               /*get HTML object with Id container */
 
 let gridTotal = 100;                                                /*set initial total amount of grid boxes to (10 x 10) */
-let gridDimension = "80px";                                         /*set initial gridDimension (width) of boxes to 1/10 of total width (800px) */
+let gridDimension = "7vmin";                                         /*set initial gridDimension (width) of boxes to 1/10 of total width (800px) */
 createGrid();                                                       /*create an initial grid using gridTotal and grid Dimension (a 10x10 grid) */
 drawGrid();                                                         /*allows user to draw without having to press any grid dimension selector buttons */
 
@@ -10,7 +10,7 @@ let tenBtn = document.getElementById("tenBtn");                     /*when (10 x
 tenBtn.addEventListener("click", () => {
     resetGrid();
     gridTotal = 100;
-    gridDimension = "80px";
+    gridDimension = "7vmin";
     createGrid();
     drawGrid();
 });
@@ -19,7 +19,7 @@ let sixteenBtn = document.getElementById("sixteenBtn");              /*when (16 
 sixteenBtn.addEventListener("click", () => {
     resetGrid();
     gridTotal = 256;                                                 /*16 x 16 */
-    gridDimension = "50px";                                          /*each box will be 1/16th of the height and width of container box (800px) */
+    gridDimension = "4.375vmin";                                          /*each box will be 1/16th of the height and width of container box (800px) */
     createGrid();
     drawGrid();
 });
@@ -28,7 +28,7 @@ let fourtyBtn = document.getElementById("fourtyBtn");
 fourtyBtn.addEventListener("click", () => {
     resetGrid();
     gridTotal = 1600;                                                /*total number of boxes (buttons) */
-    gridDimension = "20px";                                          /*each box will be 1/40th of the height and width of container box (800px) */
+    gridDimension = "1.75vmin";                                          /*each box will be 1/40th of the height and width of container box (800px) */
     createGrid();
     drawGrid();
 });
@@ -37,7 +37,7 @@ let hundredBtn = document.getElementById("hundredBtn");
 hundredBtn.addEventListener("click", () => {
     resetGrid();
     gridTotal = 10000;
-    gridDimension = "8px";                                           /*each box will be 1/100th of the height and width of container box (800px) */
+    gridDimension = "0.7vmin";                                           /*each box will be 1/100th of the height and width of container box (800px) */
     createGrid();
     drawGrid();
 });
