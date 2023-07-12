@@ -8,10 +8,14 @@ body {
     align-items: center;
     justify-items: center;
     background-image: linear-gradient(rgb(201, 166, 121), rgb(58, 43, 27));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+
 }
 
 p {
-    margin-top: 50px;
+    margin-top: 2vmin;
     margin-right: -80px;
     color:rgb(241, 223, 197);
     font-family: sans-serif;
@@ -27,13 +31,13 @@ p {
     border-width: 8px;
     border-radius: 8px;
     border-color: rgba(0, 0, 0, 0.37);
-    height: 800px;
-    width: 800px;
+    height: 70vmin;
+    width: 70vmin;
     display: flex;
     flex-wrap: wrap;
     flex-shrink: 0;
     background-color: rgba(0,0,0,.1);
-    box-shadow: 0px 0px 40px 20px rgba(241, 223, 197, 0.4);
+    box-shadow: 0px 0px 20px 10px rgba(241, 223, 197, 0.4);
 }
 
 .grid {
@@ -65,11 +69,11 @@ p {
     font-weight: bold;
     letter-spacing: 2px;
     background-color: rgba(0, 0, 0, 0.021);
-    box-shadow: 0px 0px 10px 10px rgba(241, 223, 197, 0.24);
+    box-shadow: 0px 0px 5px 5px rgba(241, 223, 197, 0.24);
     transition: 0.5s;
 }
 
 .selector:hover{
-    box-shadow: 0px 0px 10px 10px rgba(241, 223, 197, 0.555);
+    box-shadow: 0px 0px 7px 7px rgba(241, 223, 197, 0.555);
     letter-spacing: 3px;
 }
