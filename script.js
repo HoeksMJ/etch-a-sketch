@@ -8,7 +8,7 @@ drawGrid();                                                         /*allows use
 
 let tenBtn = document.getElementById("tenBtn");                     /*when (10 x 10) button is clicked, erase any created button elements, and make a new (10 x 10) grid */
 tenBtn.addEventListener("click", () => {
-    eraseGrid();
+    resetGrid();
     gridTotal = 100;
     gridDimension = "80px";
     createGrid();
@@ -17,7 +17,7 @@ tenBtn.addEventListener("click", () => {
 
 let sixteenBtn = document.getElementById("sixteenBtn");              /*when (16 x 16) button is clicked, erase any created button elements and make a new (16 x 16) grid */
 sixteenBtn.addEventListener("click", () => {
-    eraseGrid();
+    resetGrid();
     gridTotal = 256;                                                 /*16 x 16 */
     gridDimension = "50px";                                          /*each box will be 1/16th of the height and width of container box (800px) */
     createGrid();
@@ -26,7 +26,7 @@ sixteenBtn.addEventListener("click", () => {
 
 let fourtyBtn = document.getElementById("fourtyBtn");
 fourtyBtn.addEventListener("click", () => {
-    eraseGrid();
+    resetGrid();
     gridTotal = 1600;                                                /*total number of boxes (buttons) */
     gridDimension = "20px";                                          /*each box will be 1/40th of the height and width of container box (800px) */
     createGrid();
@@ -35,7 +35,7 @@ fourtyBtn.addEventListener("click", () => {
 
 let hundredBtn = document.getElementById("hundredBtn");
 hundredBtn.addEventListener("click", () => {
-    eraseGrid();
+    resetGrid();
     gridTotal = 10000;
     gridDimension = "8px";                                           /*each box will be 1/100th of the height and width of container box (800px) */
     createGrid();
@@ -55,7 +55,7 @@ function createGrid (){                                             /*create i a
     };
 };
 
-function eraseGrid (){                                              /*target each element by its unique id, up to however many total boxes there are, determined by gridTotal, and remove */
+function resetGrid (){                                              /*target each element by its unique id, up to however many total boxes there are, determined by gridTotal, and remove */
     for (let i = 1; i <= gridTotal; i++){
         let gridBox = document.getElementById(`grid${i}`);
         gridBox.remove();
